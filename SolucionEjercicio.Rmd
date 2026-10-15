@@ -123,3 +123,20 @@ length(commonAnimals)
 commonAnimals
 ```
 
+## Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son? ¿Qué tipo de animales son?
+
+```{r}
+#diferencias
+solo_mammals<- setdiff(rownames(mammals), rownames(Animals2))
+solo_animals2 <- setdiff(rownames(Animals2), rownames(mammals))
+
+# union
+no_comunes <- union(solo_mammals, solo_animals2)
+print(paste("Cantidad total de animales que no están en ambos:", length(no_comunes)))
+
+# Qué animales son?
+solo_mammals
+solo_animals2
+```
+
+
