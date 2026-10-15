@@ -118,7 +118,6 @@ colnames(Animals2)
 ## Usa la función intersect y almacena en la variable commonAnimals los animales que aparezcan en ambos conjuntos.
 ```{r}
 commonAnimals <- intersect(rownames(mammals), rownames(Animals2))
-# Ver cuántos animales en común hay y cuáles son
 length(commonAnimals)
 commonAnimals
 ```
@@ -130,11 +129,12 @@ commonAnimals
 solo_mammals<- setdiff(rownames(mammals), rownames(Animals2))
 solo_animals2 <- setdiff(rownames(Animals2), rownames(mammals))
 
-# union
 no_comunes <- union(solo_mammals, solo_animals2)
-print(paste("Cantidad total de animales que no están en ambos:", length(no_comunes)))
+print(paste("Animales no comunes en ambos:", length(no_comunes)))
+```
 
-# Qué animales son?
+Los animales no comunes son:
+```{r}
 solo_mammals
 solo_animals2
 ```
