@@ -1,5 +1,6 @@
 ---
 title: "Tarea 0 - Fase 2"
+subtitle: "Análisis Exploratorio de Datos. Máster en Ciencia de Datos - UV"
 author: "Javier Rodríguez Jiménez"
 date: "`r Sys.Date()`"
 output:
@@ -27,13 +28,12 @@ output:
     toc: true
     toc_depth: 3
     number_sections: true
-    figure_caption: "Figura" # Referencias en castellano
+    figure_caption: "Figura"
     table_caption: "Tabla"
 always_allow_html: true
 params:
   lang: ES
-lang: "`r switch(params$lang, ES = 'es-ES', EN = 'en-US')`"
-subtitle: "Análisis Exploratorio de Datos. Máster en Ciencia de Datos- UV"
+lang: "es-ES"
 language:
   label:
     fig: 'Figura '
@@ -76,6 +76,40 @@ Y con la función help
 
 ```{r}
 help(mammals)
+
 help(Animals2)
 ```
+_Mammals_ es un data frame donde nos indican el peso medio en kg del cerebro y del cuerpo de 62 especies de mamíferos terrestre. Por otro lado, _Animals2_ es un data frame que tiene las mismas variables que _mammals_ pero tiene 62 especies de mamíferos terrestres y _otros tres_. También nos informa que este último data set proviene de la unión de _Animals_ y _mammals_.
 
+## Usa las funciones dim, head, tail, str para una primera visión de los conjuntos de datos.
+
+```{r}
+# Dimensiones
+dim(mammals)
+dim(Animals2)
+
+# Primeras filas
+head(mammals)
+head(Animals2)
+
+# Últimas filas
+tail(mammals)
+tail(Animals2)
+
+# Estructura interna de los datos
+str(mammals)
+str(Animals2)
+```
+Se comprueba que _Animals2_ es una extensión de _mammals_ tanto en el número de filas de ambos como en los datos de las últimas filas de ambos.
+
+
+## Muestra los nombres de las filas y las columnas (rownames, colnames)
+```{r}
+
+# Nombres de filas 
+rownames(mammals)
+rownames(Animals2)
+# Nombres de columnas
+colnames(mammals)
+colnames(Animals2)
+```
