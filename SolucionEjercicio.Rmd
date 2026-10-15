@@ -3,11 +3,12 @@ title: "Tarea 0 - Fase 2"
 author: "Javier Rodríguez Jiménez"
 date: "`r Sys.Date()`"
 output:
-  bookdown::pdf_document2:
-    toc: true
-    toc_depth: 3
+  bookdown::html_document2:
+    echo: true
     number_sections: true
-    figure_caption: "Figura" # Referencias en castellano
+    theme: spacelab
+    toc: true
+    figure_caption: "Figura"
     table_caption: "Tabla"
   html_document:
     echo: true
@@ -22,12 +23,11 @@ output:
     toc: true
     toc_depth: 3
     number_sections: true
-  bookdown::html_document2:
-    echo: true
-    number_sections: true
-    theme: spacelab
+  bookdown::pdf_document2:
     toc: true
-    figure_caption: "Figura"
+    toc_depth: 3
+    number_sections: true
+    figure_caption: "Figura" # Referencias en castellano
     table_caption: "Tabla"
 always_allow_html: true
 params:
@@ -323,7 +323,7 @@ Podemos especificar parámetros de tamaño y ubicación en el *chunk*
 En este caso visualizamos el código. Observa como podemos incluir una figura y también ponerle un título
 
 ```{r rmarkdown2, echo=TRUE, out.width='20%', fig.align='center', fig.cap='Logo GCD (desde archivo png).'}
-#knitr::include_graphics("figure/logoEtse.png")
+knitr::include_graphics("figure/logoEtse.png")
 ```
 
 
