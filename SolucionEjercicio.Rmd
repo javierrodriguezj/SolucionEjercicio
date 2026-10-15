@@ -30,8 +30,8 @@ output:
     figure_caption: "Figura" # Referencias en castellano
     table_caption: "Tabla"
 always_allow_html: true
-#params:
-#  lang: ES
+params:
+  lang: ES
 lang: "`r switch(params$lang, ES = 'es-ES', EN = 'en-US')`"
 subtitle: "Análisis Exploratorio de Datos. Máster en Ciencia de Datos- UV"
 language:
@@ -77,25 +77,5 @@ Y con la función help
 ```{r}
 help(mammals)
 help(Animals2)
-```
-
-## Usa las funciones dim, head, tail, str para una primera visión de los conjuntos de datos.
-
-```{r}
-# Dimensiones
-dim(mammals)
-dim(Animals2)
-
-# Primeras filas
-head(mammals)
-head(Animals2)
-
-# Últimas filas
-tail(mammals)
-tail(Animals2)
-
-# Estructura interna de los datos
-str(mammals)
-str(Animals2)
 ```
 
